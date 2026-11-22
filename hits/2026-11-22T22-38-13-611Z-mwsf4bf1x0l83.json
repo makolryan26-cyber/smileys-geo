@@ -1,0 +1,42 @@
+{
+ "id": "mwsf4bf1x0l83",
+ "ts": "2026-11-22T22:38:13.611Z",
+ "gps": null,
+ "ipgeo": {
+  "ip": "89.248.171.24",
+  "country": "Netherlands",
+  "country_code": "NL",
+  "region": "Provincie Noord-Holland",
+  "city": "Amsterdam",
+  "latitude": 52.374028,
+  "longitude": 4.8896881,
+  "postal": "1012",
+  "connection": {
+   "asn": 202425,
+   "org": "Ip Volume INC",
+   "isp": "IP Volume inc",
+   "domain": "ipvolume.net"
+  },
+  "timezone": {
+   "id": "Europe/Amsterdam",
+   "abbr": "CET",
+   "is_dst": false,
+   "offset": 3600,
+   "utc": "+01:00"
+  }
+ },
+ "addr": null,
+ "meta": {
+  "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36",
+  "lang": "en-US",
+  "langs": "en-US",
+  "platform": "Win32",
+  "cores": 96,
+  "mem": null,
+  "touch": 0,
+  "screen": "1366x768",
+  "dpr": 1,
+  "tz": "UTC",
+  "ref": null
+ }
+}
