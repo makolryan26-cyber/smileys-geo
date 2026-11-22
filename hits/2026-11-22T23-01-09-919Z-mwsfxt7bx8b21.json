@@ -1,0 +1,42 @@
+{
+ "id": "mwsfxt7bx8b21",
+ "ts": "2026-11-22T23:01:09.918Z",
+ "gps": null,
+ "ipgeo": {
+  "ip": "83.229.118.4",
+  "country": "Canada",
+  "country_code": "CA",
+  "region": "Ontario",
+  "city": "Toronto",
+  "latitude": 43.706428,
+  "longitude": -79.3986419,
+  "postal": "M4R",
+  "connection": {
+   "asn": 207990,
+   "org": "IPPN HOLDINGS LTD",
+   "isp": "HostRoyale Technologies Pvt Ltd",
+   "domain": "hostroyale.com"
+  },
+  "timezone": {
+   "id": "America/Toronto",
+   "abbr": "EST",
+   "is_dst": false,
+   "offset": -18000,
+   "utc": "-05:00"
+  }
+ },
+ "addr": null,
+ "meta": {
+  "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 26_3_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/144.0.7559.95 Mobile/15E148 Safari/604.1",
+  "lang": "en-US",
+  "langs": "en-US,en",
+  "platform": "iPhone",
+  "cores": 16,
+  "mem": 6,
+  "touch": 5,
+  "screen": "390x844",
+  "dpr": 3,
+  "tz": "America/Los_Angeles",
+  "ref": null
+ }
+}
