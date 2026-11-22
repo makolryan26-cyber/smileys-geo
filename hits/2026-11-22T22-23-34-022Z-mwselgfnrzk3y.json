@@ -1,0 +1,42 @@
+{
+ "id": "mwselgfnrzk3y",
+ "ts": "2026-11-22T22:23:34.021Z",
+ "gps": null,
+ "ipgeo": {
+  "ip": "172.56.25.150",
+  "country": "United States",
+  "country_code": "US",
+  "region": "Texas",
+  "city": "Houston",
+  "latitude": 29.7632756,
+  "longitude": -95.3632705,
+  "postal": "77052",
+  "connection": {
+   "asn": 21928,
+   "org": "T-Mobile USA, Inc.",
+   "isp": "T-Mobile USA, Inc.",
+   "domain": "t-mobile.com"
+  },
+  "timezone": {
+   "id": "America/Chicago",
+   "abbr": "CST",
+   "is_dst": false,
+   "offset": -21600,
+   "utc": "-06:00"
+  }
+ },
+ "addr": null,
+ "meta": {
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+  "lang": "en-US",
+  "langs": "en-US,en",
+  "platform": "Linux x86_64",
+  "cores": 8,
+  "mem": null,
+  "touch": 10,
+  "screen": "1280x800",
+  "dpr": 1.5,
+  "tz": "America/Chicago",
+  "ref": null
+ }
+}
