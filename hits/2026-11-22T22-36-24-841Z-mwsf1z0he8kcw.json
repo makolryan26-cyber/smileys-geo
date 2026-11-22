@@ -1,0 +1,42 @@
+{
+ "id": "mwsf1z0he8kcw",
+ "ts": "2026-11-22T22:36:24.841Z",
+ "gps": null,
+ "ipgeo": {
+  "ip": "195.177.93.133",
+  "country": "Switzerland",
+  "country_code": "CH",
+  "region": "Kanton Zurich",
+  "city": "Zurich",
+  "latitude": 47.3666715,
+  "longitude": 8.5540819,
+  "postal": "8098",
+  "connection": {
+   "asn": 212238,
+   "org": "Pitline Ltd",
+   "isp": "Datacamp Limited",
+   "domain": "pitline.net"
+  },
+  "timezone": {
+   "id": "Europe/Zurich",
+   "abbr": "CET",
+   "is_dst": false,
+   "offset": 3600,
+   "utc": "+01:00"
+  }
+ },
+ "addr": null,
+ "meta": {
+  "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+  "lang": "en-US",
+  "langs": "en-US",
+  "platform": "Win32",
+  "cores": 8,
+  "mem": null,
+  "touch": 0,
+  "screen": "1920x1080",
+  "dpr": 1,
+  "tz": "America/New_York",
+  "ref": null
+ }
+}
