@@ -1,0 +1,42 @@
+{
+ "id": "mwtqe3t4mpza7",
+ "ts": "2026-11-23T20:41:42.974Z",
+ "gps": null,
+ "ipgeo": {
+  "ip": "54.202.22.91",
+  "country": "United States",
+  "country_code": "US",
+  "region": "Oregon",
+  "city": "Boardman",
+  "latitude": 45.8398578,
+  "longitude": -119.7005791,
+  "postal": "97818",
+  "connection": {
+   "asn": 16509,
+   "org": "Amazon.com, Inc.",
+   "isp": "Amazon.com, Inc.",
+   "domain": "amazon.com"
+  },
+  "timezone": {
+   "id": "America/Los_Angeles",
+   "abbr": "PST",
+   "is_dst": false,
+   "offset": -28800,
+   "utc": "-08:00"
+  }
+ },
+ "addr": null,
+ "meta": {
+  "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1",
+  "lang": "en-US",
+  "langs": "en-US,en",
+  "platform": "Linux x86_64",
+  "cores": 2,
+  "mem": 4,
+  "touch": 1,
+  "screen": "428x926",
+  "dpr": 3,
+  "tz": "UTC",
+  "ref": null
+ }
+}
