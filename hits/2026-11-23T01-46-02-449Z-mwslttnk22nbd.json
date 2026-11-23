@@ -1,0 +1,42 @@
+{
+ "id": "mwslttnk22nbd",
+ "ts": "2026-11-23T01:46:02.449Z",
+ "gps": null,
+ "ipgeo": {
+  "ip": "199.235.133.8",
+  "country": "Myanmar",
+  "country_code": "MM",
+  "region": "Nay Pyi Taw",
+  "city": "Zabu Thiri",
+  "latitude": 19.7456658,
+  "longitude": 96.0808311,
+  "postal": "15011",
+  "connection": {
+   "asn": 137409,
+   "org": "Private Customer",
+   "isp": "GSL Networks Pty LTD",
+   "domain": "us.com"
+  },
+  "timezone": {
+   "id": "Asia/Yangon",
+   "abbr": "+0630",
+   "is_dst": false,
+   "offset": 23400,
+   "utc": "+06:30"
+  }
+ },
+ "addr": null,
+ "meta": {
+  "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
+  "lang": "en-US",
+  "langs": "en-US,en",
+  "platform": "Win32",
+  "cores": 8,
+  "mem": 16,
+  "touch": 0,
+  "screen": "1746x982",
+  "dpr": 1.100000023841858,
+  "tz": "UTC",
+  "ref": null
+ }
+}
