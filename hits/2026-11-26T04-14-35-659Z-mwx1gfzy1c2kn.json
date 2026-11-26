@@ -1,0 +1,42 @@
+{
+ "id": "mwx1gfzy1c2kn",
+ "ts": "2026-11-26T04:14:35.658Z",
+ "gps": null,
+ "ipgeo": {
+  "ip": "185.117.225.210",
+  "country": "United States",
+  "country_code": "US",
+  "region": "District of Columbia",
+  "city": "Washington",
+  "latitude": 38.8951121,
+  "longitude": -77.0363706,
+  "postal": "20511",
+  "connection": {
+   "asn": 14618,
+   "org": "Nsec - Sistemas Informaticos, S.A.",
+   "isp": "Amazon.com, Inc.",
+   "domain": "nsec.pt"
+  },
+  "timezone": {
+   "id": "America/New_York",
+   "abbr": "EST",
+   "is_dst": false,
+   "offset": -18000,
+   "utc": "-05:00"
+  }
+ },
+ "addr": null,
+ "meta": {
+  "ua": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.6312.86 Safari/537.36 BitSightBot/1.0",
+  "lang": "en-US",
+  "langs": "en-US",
+  "platform": "Linux x86_64",
+  "cores": 16,
+  "mem": 8,
+  "touch": 0,
+  "screen": "1080x1920",
+  "dpr": 1,
+  "tz": "Etc/Unknown",
+  "ref": null
+ }
+}
