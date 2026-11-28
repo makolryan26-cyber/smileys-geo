@@ -1,0 +1,42 @@
+{
+ "id": "mwzz2fmngjcny",
+ "ts": "2026-11-28T05:31:01.397Z",
+ "gps": null,
+ "ipgeo": {
+  "ip": "91.247.163.187",
+  "country": "Germany",
+  "country_code": "DE",
+  "region": "Hessen",
+  "city": "Frankfurt am Main",
+  "latitude": 50.1155207,
+  "longitude": 8.6841662,
+  "postal": "60256",
+  "connection": {
+   "asn": 46475,
+   "org": "Beyond Tomorrow Ltd",
+   "isp": "Limestone Networks, Inc.",
+   "domain": "btmrw.com"
+  },
+  "timezone": {
+   "id": "Europe/Berlin",
+   "abbr": "CET",
+   "is_dst": false,
+   "offset": 3600,
+   "utc": "+01:00"
+  }
+ },
+ "addr": null,
+ "meta": {
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
+  "lang": "en-US",
+  "langs": "en-US,en",
+  "platform": "Linux x86_64",
+  "cores": 4,
+  "mem": null,
+  "touch": 0,
+  "screen": "800x600",
+  "dpr": 1,
+  "tz": "Europe/Moscow",
+  "ref": null
+ }
+}
